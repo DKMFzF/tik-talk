@@ -1,2 +1,7 @@
 @use './vendor/normalize.css';
-@use './app/scss/variables' as *;
+@use './scss/variables' as *;
+
+body {
+  background-color: $dark-color;
+  color: $light-color;
+}
