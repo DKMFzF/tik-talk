@@ -1,5 +1,8 @@
+// components
+@use './app/components/porfile-card/porfile-card.component.scss';
+
 @use './vendor/normalize.css';
-@use './scss/variables' as *;
+@use './app/scss/variables' as *;
 
 body {
   background-color: $dark-color;
