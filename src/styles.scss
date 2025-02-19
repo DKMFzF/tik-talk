@@ -1,3 +1,6 @@
+// assets
+@use './vendor/jet-brains-mono/index.css';
+
 // components
 @use './app/components/porfile-card/porfile-card.component.scss';
 
@@ -7,4 +10,5 @@
 body {
   background-color: $dark-color;
   color: $light-color;
+  font-family: $default-font;
 }

@@ -2,4 +2,41 @@
 
 .profile-card {
   border: 1px solid $light-color;
+  padding-block: 32px;
+  padding-inline: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+
+  &__base-info-container { 
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-gap: 20px;
+  }
+
+  &__avatar {
+    block-size: 71px;
+    inline-size: 71px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  &__initials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  &__tag {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
