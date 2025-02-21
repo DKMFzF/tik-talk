@@ -6,6 +6,6 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
  * Настройка роутинга приложения
  */
 export const routes: Routes = [
-  {path: '', component: SearchPageComponent},
-  {path: 'login', component: LoginPageComponent}
+  { path: '', component: SearchPageComponent },
+  { path: 'login', component: LoginPageComponent },
 ];

@@ -1,31 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PorfileCardComponent } from "./components/porfile-card/porfile-card.component";
-import { ProfileService } from './shared/services/profile.service';
-import { IProfile } from './types/profiles';
 
 @Component({
   selector: 'app-root', // селектор главной страницы
   
   // тут прописываются зависимости
   // которые нужны для создания главной страницы
-  imports: [RouterOutlet, PorfileCardComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html', // html-шаблон главной страницы
   styleUrl: './app.component.scss' // стили главной страницы
 })
 export class AppComponent {
   title = 'Tik-Talk';
-  profileService = inject(ProfileService)
-  profiles: IProfile[] = [];
-
-  constructor() {
-    this.profileService.getTestAcc().subscribe({
-      next: (val) => {
-        this.profiles = val;
-      },
-      error: (err) => {
-        throw new Error(err);
-      }
-    });
-  }
 }
