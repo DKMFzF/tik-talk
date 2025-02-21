@@ -2,7 +2,7 @@
 @use './vendor/jet-brains-mono/index.css';
 
 // components
-@use './app/components/porfile-card/porfile-card.component.scss';
+// @use './app/components/porfile-card/porfile-card.component.scss';
 
 @use './vendor/normalize.css';
 @use './app/scss/variables' as *;
@@ -17,6 +17,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 800;
 }
 
 .skill-tag {

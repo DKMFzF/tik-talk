@@ -1,4 +1,65 @@
+@import '../../scss/variables';
+
 :host {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; // Две колонки
+  height: 100dvh;
+  align-items: center;
+  margin: 0 5%;
+
+  .login {
+    &__form-container {
+      display: flex;
+      justify-content: center; // Выравнивание по горизонтали
+      align-items: center;    // Выравнивание по вертикали
+      height: 100%;           // Занимает всю высоту левой колонки
+    }
+
+    &__form {
+      width: 100%;            // Форма занимает всю доступную ширину
+      max-width: 440px;       // Ограничение максимальной ширины формы
+    }
+
+    &__submit-section {
+      margin-block-start: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__label {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+    }
+
+    &__input {
+      margin-block-start: 12px;
+      display: block;
+      width: 100%;
+      max-width: 440px;
+      border: 1px solid $light-color;
+      padding: 12px;
+      color: $light-color;
+      background-color: black;
+    }
+
+    &__button {
+      margin-block-start: 32px;
+      width: 100%;
+      max-width: 440px;
+      color: $dark-color;
+      font-weight: 800;
+      padding-block: 10px;
+      background-color: $primary-color;
+      cursor: pointer;
+    }
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
 }
