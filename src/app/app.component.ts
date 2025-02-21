@@ -17,15 +17,12 @@ import { TProfileId } from './types/profiles';
 export class AppComponent {
   title = 'Tik-Talk';
   profileService = inject(ProfileService)
-  profiles: Record<TProfileId, IProfile> = {};
+  profiles: IProfile[] = [];
 
   constructor() {
     this.profileService.getTestAcc().subscribe({
       next: (val) => {
-        val.forEach((profile) => {
-          this.profiles[String(profile.id)] = profile;
-        });
-        console.log(this.profiles);
+        this.profiles = val;
       },
       error: (err) => {
         throw new Error(err);

@@ -1,35 +1,32 @@
-<article class="profile-card">
-  <div class="profile-card__base-info-container">
-    <img
-      class="profile-card__avatar"
-      src="./assets/avatar.png"
-      alt="user avatar"
-    />
-    <div class="profile-card__initials">
-      <h6 class="profile-card__name">Rayn Gosling</h6>
-      <span class="profile-card__tag">ryan.gosling</span>
+<!-- условный рендаринг -->
+@if (profile) {
+  <article class="profile-card">
+    <div class="profile-card__base-info-container">
+      <img
+        class="profile-card__avatar"
+        src="./assets/avatar.png"
+        alt="user avatar"
+      />
+      <div class="profile-card__initials">
+        <h6 class="profile-card__name">{{ profile.firstName }} {{ profile.lastName }}</h6>
+        <span class="profile-card__tag">{{ profile.username }}</span>
+      </div>
     </div>
-  </div>
-  
-  <div class="profile-card__description">
-    <p>
-      Список навыков, который мы обсудили выше, — основа резюме,
-      но не единственная его часть. Также можно рассказать о себе в классическом
-      смысле — этот раздел можно добавить в сопроводительное письмо.
-    </p>
-  </div>
-
-  <div class="profile-card__skill-tags-container">
-    <div class="profile-card__skill-tags">
-      <div class="skill-tag">Angular</div>
-      <div class="skill-tag">HTML</div>
-      <div class="skill-tag">CSS</div>
-      <div class="skill-tag">SCSS</div>
-      <div class="skill-tag">JS</div>
+    
+    <div class="profile-card__description">
+      <p>{{ profile.description }}</p>
     </div>
-  </div>
 
-  <div class="profile-card__actions-btns">
-    <button class="btn">Подписаться</button>
-  </div>
-</article>
+    <div class="profile-card__skill-tags-container">
+      <div class="profile-card__skill-tags">
+        @for (tag of profile.stack; track profile.id) {
+          <div class="skill-tag">{{ tag }}</div>
+        }
+      </div>
+    </div>
+
+    <div class="profile-card__actions-btns">
+      <button class="btn">Подписаться</button>
+    </div>
+  </article>
+}

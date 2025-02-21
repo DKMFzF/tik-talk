@@ -1,1 +1,7 @@
-<app-porfile-card></app-porfile-card>
+<div class="profile-card__wrapper">
+  @for (profile of profiles; track profile.id) {
+    <app-porfile-card
+      [profile]="profile"
+    ></app-porfile-card>
+  }  
+</div>

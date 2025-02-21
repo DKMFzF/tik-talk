@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IProfile } from '../../types/profiles';
 
 @Component({
   selector: 'app-porfile-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './porfile-card.component.scss'
 })
 export class PorfileCardComponent {
-
+  @Input() profile!: IProfile;
 }
