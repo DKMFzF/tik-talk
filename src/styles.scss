@@ -8,9 +8,15 @@
 @use './app/scss/variables' as *;
 
 body {
+  block-size: 100vh;
+  inline-size: 100vw;
   background-color: $dark-color;
   color: $light-color;
   font-family: $default-font;
+  background-image: url('../public/assets/bg-global.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
 .skill-tag {
