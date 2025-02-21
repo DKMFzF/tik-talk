@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: 70px 1fr;
     grid-gap: 20px;
+    align-items: center;
   }
 
   &__avatar {
@@ -38,5 +39,22 @@
     display: block;
     font-size: 14px;
     font-weight: 400;
+  }
+
+  &__skill-tags-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: fit-content;
+    gap: 4px;
+  }
+
+  &__skill-tags > :not(:first-child) {
+    margin-inline-start: 0;
   }
 }
