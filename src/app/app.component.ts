@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PorfileCardComponent } from "./components/porfile-card/porfile-card.component";
-import { ProfileService } from './data/services/profile.service';
+import { ProfileService } from './shared/services/profile.service';
 import { IProfile } from './types/profiles';
 import { TProfileId } from './types/profiles';
 

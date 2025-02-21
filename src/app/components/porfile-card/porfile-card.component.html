@@ -4,8 +4,8 @@
     <div class="profile-card__base-info-container">
       <img
         class="profile-card__avatar"
-        src="./assets/avatar.png"
-        alt="user avatar"
+        [src]="profile.avatarUrl | imgUrl"
+        [alt]="profile.firstName"
       />
       <div class="profile-card__initials">
         <h6 class="profile-card__name">{{ profile.firstName }} {{ profile.lastName }}</h6>

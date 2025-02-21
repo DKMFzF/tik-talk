@@ -35,6 +35,11 @@
     // white-space: nowrap;
   }
 
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+
   &__tag {
     display: block;
     font-size: 14px;
@@ -54,7 +59,9 @@
     gap: 4px;
   }
 
-  &__skill-tags > :not(:first-child) {
-    margin-inline-start: 0;
+  &__actions-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
