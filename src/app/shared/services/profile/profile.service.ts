@@ -16,9 +16,13 @@ interface IProfileService {
 })
 export class ProfileService implements IProfileService {
   private http = inject(HttpClient);
-  private baseUrl = API_ORIGIN;
+  private baseUrl = `${API_ORIGIN}/account`;
 
   public getTestAcc(): Observable<IProfileView[]> {
-    return this.http.get<IProfileView[]>(`${this.baseUrl}/account/test_accounts`);
+    return this.http.get<IProfileView[]>(`${this.baseUrl}/test_accounts`);
+  }
+
+  public getUser() {
+    return this.http.get<IProfileView>(`${this.baseUrl}/me`)
   }
 }
