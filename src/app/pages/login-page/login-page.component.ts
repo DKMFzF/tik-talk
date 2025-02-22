@@ -32,9 +32,8 @@ export class LoginPageComponent implements ILoginPageComponent {
   public router: Router = inject(Router);
 
   public onSubmit(event: Event) {
-    if (this.form.valid) this.authService.login(this.form.value as IAuthPost).subscribe(res => {
-      this.router.navigate(['']);
-      console.log(res);
+    if (this.form.valid) this.authService.login(this.form.value as IAuthPost).subscribe(() => {
+      this.router.navigate(['']); // разрешаем вход
     });
   }
 }

@@ -14,7 +14,7 @@ export const routes: Routes = [
       { path: '', component: SearchPageComponent },
       { path: 'profile', component: ProfilePageComponent },
     ],
-    canActivate: [canActivateAuth], 
+    canActivate: [canActivateAuth], // вставляем защиту
   },
   { path: 'login', component: LoginPageComponent },
 ];
