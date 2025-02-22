@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProfile } from '../../types/profiles';
+import { IProfileView } from '../../types/profiles';
 import { ImgUrlPipe } from '../../shared/pipes/img-url.pipe';
 
 @Component({
@@ -9,5 +9,5 @@ import { ImgUrlPipe } from '../../shared/pipes/img-url.pipe';
   styleUrl: './porfile-card.component.scss'
 })
 export class PorfileCardComponent {
-  @Input() profile!: IProfile;
+  @Input() profile!: IProfileView;
 }

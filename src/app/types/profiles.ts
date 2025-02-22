@@ -2,7 +2,7 @@ export type TProfileSteckTags = string[]
 export type TProfileAvatar = string | null
 export type TProfileId = string;
 
-export interface IProfile {
+export interface IProfileView {
   readonly id: TProfileId;
   username: string;
   description: string;

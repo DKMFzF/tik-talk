@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { PorfileCardComponent } from '../../components/porfile-card/porfile-card.component';
-import { ProfileService } from '../../shared/services/profile.service';
-import { IProfile } from '../../types/profiles';
+import { ProfileService } from '../../shared/services/profile/profile.service';
+import { IProfileView } from '../../types/profiles';
 
 @Component({
   selector: 'app-search-page',
@@ -10,9 +10,9 @@ import { IProfile } from '../../types/profiles';
   styleUrl: './search-page.component.scss'
 })
 export class SearchPageComponent {
-  title = 'Tic-Talk-Search'
-  profileService = inject(ProfileService)
-  profiles: IProfile[] = [];
+  public title = 'Tic-Talk-Search'
+  private profileService = inject(ProfileService)
+  public profiles: IProfileView[] = [];
 
   constructor() {
     this.profileService.getTestAcc().subscribe({
