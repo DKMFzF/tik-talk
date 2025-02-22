@@ -1,1 +1,44 @@
+:host {
+  display: block;
+  margin: 20px 12px;
+  
+  .side-bar {
+    &__logo {
+      margin-inline-start: 16px;
+      inline-size: 61px;
+      block-size: 74px;
+    }
 
+    &__list-tool {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-block-start: 20px;
+    }
+
+    &__bar-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 16px;
+      border: none;
+      inline-size: 100%;
+      background-color: transparent;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    &__item-img {
+      display: inline-block;
+      inline-size: 16px;
+      block-size: 16px;
+    }
+
+    &__list-tool-item {
+      &:hover {
+        background-color: rgba(22, 22, 22, 1);
+        color: rgba(174, 122, 255, 1);
+      }
+    }
+  }
+}
