@@ -1,17 +1,21 @@
 <div class="login__form-container">
-  <form class="login__form">
+  <form 
+    class="login__form" 
+    [formGroup]="form"
+    (ngSubmit)="onSubmit($event)"
+  >
     <h1 class="login__title">Вход</h1>
     <div class="login__submit-section">
       <label class="login__label">
         Telegram username
-        <input class="login__input" type="text" placeholder="Введите логин">
+        <input formControlName="username" class="login__input" type="text" placeholder="Введите логин">
       </label>
       <label class="login__label">
         Пароль
-        <input class="login__input" type="password" placeholder="Введите пароль">
+        <input formControlName="password" class="login__input" type="password" placeholder="Введите пароль">
       </label>
     </div>
-    <button class="login__button">Войти</button>
+    <button class="login__button" type="submit">Войти</button>
   </form>
 </div>
 
