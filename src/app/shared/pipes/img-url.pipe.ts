@@ -1,6 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { API_ORIGIN } from '../../environment/env';
 
+/**
+ * пайп изображения
+ */
 @Pipe({
   name: 'imgUrl'
 })

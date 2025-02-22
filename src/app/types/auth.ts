@@ -3,7 +3,6 @@ export interface IToken {
   refresh_token: string | null;
 }
 
-// export type TAuth 
 export interface IAuthPost {
   username: string;
   password: string;

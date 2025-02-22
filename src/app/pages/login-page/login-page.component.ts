@@ -14,6 +14,9 @@ interface ILoginPageComponent {
   onSubmit(event: Event): void; 
 }
 
+/**
+ * страница авторизации
+ */
 @Component({
   selector: 'app-login-page',
   imports: [ReactiveFormsModule],

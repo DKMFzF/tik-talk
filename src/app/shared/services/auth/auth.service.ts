@@ -10,6 +10,9 @@ export interface IAuthService {
   isAuth(): boolean;
 }
 
+/**
+ * аунтификация
+ */
 @Injectable({
   providedIn: 'root'
 })

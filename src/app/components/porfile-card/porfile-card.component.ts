@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { IProfileView } from '../../types/profiles';
 import { ImgUrlPipe } from '../../shared/pipes/img-url.pipe';
 
+/**
+ * карточка юзеров
+ */
 @Component({
   selector: 'app-porfile-card',
   imports: [ImgUrlPipe],

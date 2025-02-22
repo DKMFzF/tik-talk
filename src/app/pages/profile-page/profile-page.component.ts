@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * страница профиля
+ */
 @Component({
   selector: 'app-profile-page',
   imports: [],

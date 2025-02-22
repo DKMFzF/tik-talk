@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * сайд-бар
+ */
 @Component({
   selector: 'app-side-bar',
   imports: [],

@@ -8,6 +8,9 @@ interface IProfileService {
   getTestAcc(): Observable<IProfileView[]>;
 }
 
+/**
+ * загрузка профилей пользователей
+ */
 @Injectable({
   providedIn: 'root'
 })

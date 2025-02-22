@@ -3,6 +3,9 @@ import { PorfileCardComponent } from '../../components/porfile-card/porfile-card
 import { ProfileService } from '../../shared/services/profile/profile.service';
 import { IProfileView } from '../../types/profiles';
 
+/**
+ * страница поиска
+ */
 @Component({
   selector: 'app-search-page',
   imports: [PorfileCardComponent],
