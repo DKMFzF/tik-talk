@@ -15,8 +15,14 @@
 
 <div class="side-bar__container-subs">
   <h5 class="side-bar__title-subs">Подписчики</h5>
-  
-  <!-- <app-subs-card></app-subs-card> -->
+
+  <div class="side-bar__subs-view">
+    @for (profile of subscribers | async; track profile.id) {
+      <app-subs-card
+        [profile]="profile"
+      ></app-subs-card>
+    }
+  </div>
   
   <div class="side-bar__subs">
     <a 

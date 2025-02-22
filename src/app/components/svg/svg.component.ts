@@ -11,7 +11,6 @@ export class SvgComponent {
   @Input() icon = ''
   
   get href() {
-    console.log(`/assets/${this.icon}.svg#${this.icon}`)
     return `/assets/${this.icon}.svg#${this.icon}`
   }
 }
