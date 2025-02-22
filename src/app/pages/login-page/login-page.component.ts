@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService, IAuthService } from '../../shared/services/auth/auth.service';
@@ -25,6 +25,9 @@ interface ILoginPageComponent {
 })
 export class LoginPageComponent implements ILoginPageComponent {
   private authService: IAuthService = inject(AuthService);
+
+  public isPassVisible = signal<boolean>(false); 
+
   public form: FormGroup<LoginForm> = new FormGroup<LoginForm>({
     username: new FormControl<string | null>(null, Validators.required),
     password: new FormControl<string | null>(null, Validators.required),

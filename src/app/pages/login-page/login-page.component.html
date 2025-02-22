@@ -10,9 +10,10 @@
         Telegram username
         <input formControlName="username" class="login__input" type="text" placeholder="Введите логин">
       </label>
-      <label class="login__label">
+      <label class="login__label login__pass-input">
         Пароль
-        <input formControlName="password" class="login__input" type="password" placeholder="Введите пароль">
+        <input formControlName="password" class="login__input" [type]="isPassVisible() ? 'text' : 'password'" placeholder="Введите пароль">
+        <button class="login__eye-pass" (click)="isPassVisible.set(!isPassVisible())"></button>
       </label>
     </div>
     <button class="login__button" type="submit">Войти</button>
