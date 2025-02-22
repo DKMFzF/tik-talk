@@ -2,25 +2,14 @@
 
 <nav>
   <ul class="side-bar__list-tool">
-    <li class="side-bar__list-tool-item">
-      <button class="side-bar__bar-btn">
-        <img class="side-bar__item-img" src="/assets/home.svg" alt="иконка моей страницы">
-        Моя страница
-      </button>
-    </li>
-    <li class="side-bar__list-tool-item">
-      <button class="side-bar__bar-btn">
-        <svg icon="home"></svg>
-        <img class="side-bar__item-img" src="/assets/chat.svg" alt="иконка чатов">
-        Чаты
-      </button>
-    </li>
-    <li class="side-bar__list-tool-item">
-      <button class="side-bar__bar-btn">
-        <img class="side-bar__item-img" src="/assets/search.svg" alt="иконка поиска">
-        Поиск
-      </button>
-    </li>
+    @for (svg of menuItems; track menuItems[0].label) {
+      <li class="side-bar__list-tool-item">
+        <button class="side-bar__bar-btn">
+          <svg class="item-svg" [icon]="svg.icon"></svg>
+          {{ svg.label }}
+        </button>
+      </li>
+    }
   </ul>
 </nav>
 

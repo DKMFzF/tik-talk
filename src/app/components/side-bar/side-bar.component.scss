@@ -1,6 +1,13 @@
 :host {
   display: block;
   margin: 20px 12px;
+
+  .item-svg {
+    display: inline-block;
+    inline-size: 16px;
+    block-size: 16px;
+    fill: currentColor;
+  }
   
   .side-bar {
     &__logo {
@@ -26,12 +33,6 @@
       background-color: transparent;
       cursor: pointer;
       text-align: left;
-    }
-
-    &__item-img {
-      display: inline-block;
-      inline-size: 16px;
-      block-size: 16px;
     }
 
     &__list-tool-item {
