@@ -52,7 +52,14 @@
       color: rgba(255, 255, 255, 0.75);
     }
 
+    &__subs {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
     &__all-subs {
+      text-decoration: none;
       color: rgba(174, 122, 255, 1);
     }
   }

@@ -15,11 +15,14 @@
 
 <div class="side-bar__container-subs">
   <h5 class="side-bar__title-subs">Подписчики</h5>
-  <div>
-    <!-- @for (subs of subscribers; ) {
-
-    } -->
+  
+  <!-- <app-subs-card></app-subs-card> -->
+  
+  <div class="side-bar__subs">
+    <a 
+      [routerLink]="['/subscriber']"
+      class="side-bar__all-subs"
+      >Все подписчики ></a>
   </div>
-  <p class="side-bar__all-subs">Все подписчики  > </p>
 </div>
 
