@@ -1,3 +1,6 @@
+<!-- <div class="side-bar"> -->
+<div>
+
 <img class="side-bar__logo" src="/assets/logo-tik-talk-small.svg" alt="logo">
 
 <nav>
@@ -32,3 +35,23 @@
   </div>
 </div>
 
+</div>
+
+<footer class="side-bar__footer">
+  <!-- делаем алиса me -->
+  @if (me(); as me) {
+    @if (me.avatarUrl) {
+      <img class="side-bar__user-img" [src]="me.avatarUrl | imgUrl" alt="your-user">
+    } @else {
+      <img class="side-bar__user-img" src="/assets/avatar.png" alt="your-user">
+    }
+    <p class="side-bar__username">
+      ryan.gosling
+    </p>
+    <a [routerLink]="['/settings']" class="side-bar__setting-link">
+      <svg class="side-bar__folter-setting" icon="settings"></svg>
+    </a>
+  }
+</footer>
+
+<!-- </div> -->

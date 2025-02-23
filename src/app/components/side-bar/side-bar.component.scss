@@ -1,6 +1,9 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 20px 12px;
+
 
   .item-svg {
     display: inline-block;
@@ -10,6 +13,9 @@
   }
   
   .side-bar {
+    display: flex;
+    flex-direction: column;
+
     &__logo {
       margin-inline-start: 16px;
       inline-size: 61px;
@@ -65,6 +71,29 @@
     &__all-subs {
       text-decoration: none;
       color: rgba(174, 122, 255, 1);
+    }
+
+    &__footer {
+      padding: 8px 16px;
+      gap: 12px;
+      display: flex;
+      align-items: center;
+      background-color: rgba(22, 22, 22, 1);
+    }
+
+    &__folter-setting {
+      inline-size: 14px;
+      block-size: 14px;
+    }
+
+    &__username {
+      color: rgba(174, 122, 255, 1);
+    }
+
+    &__user-img {
+      inline-size: 32px;
+      block-size: 32px;
+      border-radius: 50%;
     }
   }
 }

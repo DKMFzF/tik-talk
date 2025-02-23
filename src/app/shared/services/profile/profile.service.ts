@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { IProfileView, Pageble } from '../../../types/profiles';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { API_ORIGIN } from '../../../environment/env';
 
 interface IProfileService {
@@ -17,7 +17,7 @@ interface IProfileService {
 export class ProfileService implements IProfileService {
   private http = inject(HttpClient);
   private baseUrl = `${API_ORIGIN}/account`;
-  // private me = new BehaviorSubject<IProfileView>(null);
+  me = signal<IProfileView | null>(null);
 
   public getTestAcc(): Observable<IProfileView[]> {
     return this.http.get<IProfileView[]>(`${this.baseUrl}/test_accounts`);
@@ -30,6 +30,8 @@ export class ProfileService implements IProfileService {
   }
 
   public getUser() {
-    return this.http.get<IProfileView>(`${this.baseUrl}/me`)
+    return this.http.get<IProfileView>(`${this.baseUrl}/me`).pipe(
+      tap(res => this.me.set(res))
+    )
   }
 }

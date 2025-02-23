@@ -3,7 +3,9 @@ import { SvgComponent } from '../svg/svg.component';
 import { SubsCardComponent } from './subs-card/subs-card.component';
 import { RouterLink } from '@angular/router';
 import { ProfileService } from '../../shared/services/profile/profile.service';
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
+import { firstValueFrom } from 'rxjs';
+import { ImgUrlPipe } from '../../shared/pipes/img-url.pipe';
 
 /**
  * сайд-бар
@@ -15,7 +17,7 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
     SubsCardComponent, 
     RouterLink, 
     AsyncPipe,
-    JsonPipe
+    ImgUrlPipe
   ],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.scss'
@@ -26,7 +28,7 @@ export class SideBarComponent {
   
   subscribers = this.profileService.getSubscribersList();
 
-  // me = this.profileService.getMe();
+  me = this.profileService.me
 
   public menuItems = [
     {
@@ -45,4 +47,8 @@ export class SideBarComponent {
       link: 'search'
     }
   ]
+
+  ngOnInit() {
+    firstValueFrom(this.profileService.getUser());
+  }
 }
