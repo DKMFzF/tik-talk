@@ -12,7 +12,7 @@ export const routes: Routes = [
   { 
     path: '', component: LayoutComponent, children: [
       { path: '', component: SearchPageComponent },
-      { path: 'profile', component: ProfilePageComponent },
+      { path: 'profile/:id', component: ProfilePageComponent }, // роутинг через id
     ],
     canActivate: [canActivateAuth], // вставляем защиту
   },

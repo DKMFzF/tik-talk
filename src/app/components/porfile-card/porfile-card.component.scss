@@ -1,5 +1,9 @@
 @import '../../scss/variables';
 
+:host {
+  background-color: black;
+}
+
 .profile-card {
   border: 1px solid $light-color;
   padding-block: 32px;

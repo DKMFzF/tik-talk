@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  grid-template-columns: 122px 1fr;
+  grid-gap: 24px;
+}
+
+
+.profile {
+  &__user-img {
+    block-size: 122px;
+    inline-size: 122px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 24px;
+  }
+
+  &__username {
+    font-size: 16px;
+  }
+}
